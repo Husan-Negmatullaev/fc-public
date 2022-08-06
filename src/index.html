@@ -3,47 +3,7 @@
 	@@include('html/_head.htm',{
 		"title":"F&C Properties агентство недвижимости в Дубае | Покупка недвижимости в Дубае"
 	})
-	<body >
-	<!-- <div id="loader-wrapper">
-		<div id="loader"></div>
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
-	</div> -->
-	<style>
-		/* input[type=text]:not(.input),
-		select {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 0px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-		} */
-
-		input[type=submit] {
-		width: 100%;
-		background-color: #4CAF50;
-		color: white;
-		padding: 14px 20px;
-		margin: 0px 0;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-		}
-
-		input[type=submit]:hover {
-		background-color: #45a049;
-		}
-
-		.modelahmed {
-		border-radius: 5px;
-		background-color: #f2f2f2;
-		padding: 20px;
-		}
-	</style>
-
-	<!-- The Modal -->
+	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
@@ -52,7 +12,7 @@
 						<div class="main-block__container">
 							<div class="main-block__body" data-fullscreen>
 								<div class="main-block__title">
-									<button type="button" data-popup="#video" data-popup-youtube="Q52LJes0LxY" class="main-block__title title title_w">
+									<button type="button" data-popup="#video" class="main-block__title title title_w">
 										Найди свой дом
 										<div class="main-block__icon">
 											<span class="_icon-play"></span>
@@ -513,7 +473,7 @@
 										</div>
 									</div>
 									<div class="banner__pagination">
-	
+
 									</div>
 								</div>
 								<div class="products__item item-products">
@@ -955,55 +915,6 @@
 						</div>
 					</div>
 				</section>
-				<!-- <section class="page__expert-appeal expert-appeal">
-					<div class="expert-appeal__container">
-						<div class="expert-appeal__body">
-							<div class="expert-appeal__appeal appeal">
-								<div class="appeal__body" action="#" method="GET" enctype="multipart/form-data">
-									<div class="appeal__title">
-										Our Expert Will Help You Buy
-										<br>
-										<span class="appeal__subtitle">
-											The Best Residence in Dubai
-										</span>
-									</div>
-									<form action="#" method="GET" enctype="multipart/form-data" class="appeal__form">
-										<div class="appeal__col">
-											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Full name *" class="appeal__input">
-										</div>
-										<div class="appeal__col">
-											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Phone number *" class="appeal__input">
-										</div>
-										<div class="appeal__col">
-											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="E-mail *" class="appeal__input">
-										</div>
-										<button type="submit" class="appeal__button button button_small">Take a Quick Test</button>
-									</form>
-								</div>
-							</div>
-							<div class="expert-appeal__profile-expert profile-expert">
-								<div class="profile-expert__image-ibg"><img data-src="@img/main-page/5.JPG" alt=""></div>
-								<div class="profile-expert__content">
-									<div class="profile-expert__info-name">
-										<div class="profile-expert__full-name">Alena Pazniak</div>
-										<div class="profile-expert__profession">Area Manager</div>
-									</div>
-									<div class="profile-expert__info-expert">
-										<div class="profile-expert__icon _icon-phone-call"></div>
-										<a href="971588070001" class="profile-expert__text">+971 58 807 0001</a>
-									</div>
-									<div class="profile-expert__info-expert">
-										<div class="profile-expert__icon _icon-location-mark"></div>
-										<div class="profile-expert__text">
-											Dubai, Business Bay, Bay Square,
-											Building 13 - Dubai
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section> -->
 				<section class="page__quiz quiz">
 					<div class="quiz__container">
 						<div class="quiz__body">
@@ -1046,17 +957,9 @@
 					</a>
 				</div>
 			</main>
-			@@include('html/_footer.htm',{})
+			@@include('html/_footer-second.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
-		<!-- Start of LiveChat (www.livechat.com) code -->
-		<!-- <script>
-			window.__lc = window.__lc || {};
-			window.__lc.license = 14222202;
-			;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-		</script> -->
-		<!-- <noscript><a href="https://www.livechat.com/chat-with/14222202/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript> -->
-		<!-- End of LiveChat code -->
 	</body>
 </html>

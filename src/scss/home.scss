@@ -214,7 +214,7 @@ input, textarea {
 //====================================================================================================
 .main-block {
 	background: #fff url('@img/main-page/05.jpg') top / cover no-repeat;
-	@media (max-width:$mobileSmall){
+	@media (max-width:$tablet){
 		background: #fff url('@img/main-page/05-2.jpg') top / cover no-repeat;
 	}
 	position: relative;
@@ -237,12 +237,19 @@ input, textarea {
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
-		@media (min-width:rem(1300)){
+		@media (min-width: rem(1300)){
 			align-items: center;
 			justify-content: center;
 		}
 		@media (max-width: em(1300)){
-			padding: rem(100) 0px 30px 0px;			  
+			padding: rem(100) 0px rem(30) 0px;			  
+		}
+		@media (max-width:$tablet){
+			justify-content: center;
+		}
+		@media (max-width:$mobileSmall){
+			justify-content: flex-end; 
+			padding: rem(100) 0px rem(80) 0px;			  
 		}
 	}
 
@@ -1905,9 +1912,48 @@ input, textarea {
 	}
 }
 
-#map #loader {
-	opacity: 1;
+
+.main-map {
+	@include adaptiveValue("margin-bottom", 70, 25, $containerWidth, 767.98, 1);
+	// .main-map__body
+
+	&__body {
+	}
+
+	// .main-map__container
+
+	&__container {
+	}
+
+	// .main-map__content
+
+	&__content {
+		max-width: rem(890);
+		padding: rem(20) rem(25);
+		text-align: center;
+		margin: 0 auto;
+		background-color: #163F8E;
+		border-radius: rem(5);
+		position: relative;
+		z-index: 2;
+	}
+
+	// .main-map__title
+
+	&__title {
+		color: #fff;
+		@include adaptiveValue("font-size", 40, 20, $containerWidth, 767.98, 1);
+		line-height: math.div(47, 40);
+		font-weight: 700;
+	}
+
+	// .main-map__map
+
+	&__map {
+		margin: -40px 0px 0px 0px;
+	}
 }
+
 
 // ========================
 
@@ -2444,8 +2490,8 @@ input, textarea {
 .expert-appeal {
 	background-color: #EDEDED;
 	padding: 65px 0px 110px 0px;
-	@include adaptiveValue("padding-top", 65, 32.5, $containerWidth, $minWidth, 1);
-	@include adaptiveValue("padding-bottom", 110, 55, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-top", 65, 35, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-bottom", 65, 40, $containerWidth, 767.98, 1);
 	// .expert-appeal__container
 
 	&__container {
@@ -2560,9 +2606,9 @@ input, textarea {
 
 	// .profile-expert__image-ibg
 
-	&__image-ibg {
+	&__image {
 		@media (min-width:$tablet){
-			flex: 0 1 30.715232%;
+			flex: 0 1 49%;
 		}
 		@media (max-width:$tablet){
 			display: none;
@@ -2570,6 +2616,9 @@ input, textarea {
 		// padding-bottom: 100%;
 		border-radius: 17px;
 		overflow: hidden;
+		img {
+			max-width: 100%;
+		}
 	}
 
 	&__content {

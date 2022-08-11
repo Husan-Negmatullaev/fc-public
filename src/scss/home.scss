@@ -217,6 +217,12 @@ input, textarea {
 	@media (max-width:$tablet){
 		background: #fff url('@img/main-page/05-2.jpg') top / cover no-repeat;
 	}
+	// @media (max-width: $mobileSmall) {
+	// 	background-size: 95vh;
+	// }
+	// // @media (max-width: em(380)){
+	// // 	background-size: cover;
+	// // }
 	position: relative;
 	@include adaptiveValue("margin-bottom", 40, 25, $containerWidth, $minWidth, 1);
 	@media (min-width:$tablet){
@@ -228,6 +234,10 @@ input, textarea {
 	// .main-block__container
 
 	&__container {
+		@media (min-width:$tablet){
+			max-width: rem(1100);
+			margin: 0 auto; 
+		}
 	}
 
 	// .main-block__body
@@ -352,14 +362,14 @@ input, textarea {
 	background: rgba(255, 255, 255, .8);
 	box-shadow: 0px 11px 24px rgba(192, 192, 192, 0.35);
 	border-radius: 25px;
-	@include adaptiveValue("padding-left", 30, 15, $containerWidth, $minWidth, 1);
-	@include adaptiveValue("padding-right", 30, 15, $containerWidth, $minWidth, 1);
-	@include adaptiveValue("padding-top", 35, 20, $containerWidth, $minWidth, 1);
-	@include adaptiveValue("padding-bottom", 35, 20, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-left", 20, 15, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-right", 20, 15, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-top", 25, 20, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-bottom", 25, 20, $containerWidth, $minWidth, 1);
 	// .main-block-tabs__navigation
 
 	&__navigation {
-		margin: 0px 0px rem(20) 0px;
+		margin: 0px 0px rem(10) 0px;
 		@media (max-width:$mobile){
 			margin: 0px 0px rem(15) 0px; 
 		}
@@ -372,16 +382,16 @@ input, textarea {
 
 	&__title {
 		padding: rem(15) rem(20);
+		background-color: #fff;
+		color: #163F8E;
+		border-radius: rem(5);
+		font-size: rem(16);
+		transition: all 0.3s ease 0s;
+		border: 1px solid #163F8E;
 		@media (max-width:$mobile){
 			padding: rem(10) rem(15);
 			font-size: rem(14);
 		}
-		background-color: #fff;
-		color: #163F8E;
-		border-radius: rem(5);
-		font-size: rem(18);
-		transition: all 0.3s ease 0s;
-		border: 1px solid #163F8E;
 		&._tab-active {
 			color: #fff;
 			background-color: rgba(22, 62, 142, 0.5);
@@ -417,7 +427,7 @@ input, textarea {
 	&__body {
 		display: flex;
 		flex-wrap: wrap;
-		gap: rem(20);
+		gap: rem(10);
 		@media (max-width:$tablet){
 			gap: rem(15);
 		}
@@ -429,7 +439,7 @@ input, textarea {
 	&__row {
 		display: flex;
 		// flex-wrap: wrap;
-		gap: rem(20);
+		gap: rem(10);
 		flex: 1 1 50%;
 		@media (max-width: em(1320)){
 			flex: 1 1 100%; 
@@ -438,7 +448,7 @@ input, textarea {
 			flex: 0 1 50%;
 		}
 		@media (max-width:$tablet){
-			gap: rem(15);
+			gap: rem(10);
 		}
 		@media (max-width:$mobile){
 			gap: rem(10); 
@@ -448,14 +458,14 @@ input, textarea {
 	// .form-find__column
 
 	&__column {
-		flex: 1 1 18%;
+		flex: 1 1 20%;
 		
 		@media (max-width: em(1320)){
 			flex: 1 1 100%; 
 		}
 
 		&_large {
-			flex: 1 1 79%;
+			flex: 1 1 74%;
 			@media (max-width: em(1320)){
 				flex: 1 1 100%;
 				order: -1;
@@ -479,9 +489,9 @@ input, textarea {
 
 	&__select {
 		width: 100%;
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
-        @include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
-		line-height: 151%;
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
+		line-height: 161%;
 		color: #000000;
 		cursor: pointer;
 		border-radius: 5px;
@@ -496,8 +506,8 @@ input, textarea {
 	}
 	&__select-developer {
 		width: 100%;
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
-        @include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
 		line-height: 151%;
 		color: #000000;
 		cursor: pointer;
@@ -513,8 +523,8 @@ input, textarea {
 	}
 	&__select-area {
 		width: 100%;
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
-        @include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
 		line-height: 151%;
 		color: #000000;
 		cursor: pointer;
@@ -530,8 +540,8 @@ input, textarea {
 	}
 	&__select-type {
 		width: 100%;
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
-        @include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
 		line-height: 151%;
 		color: #000000;
 		cursor: pointer;
@@ -547,13 +557,13 @@ input, textarea {
 	}
 
 	&__option {
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
 		line-height: 151%;
 		color: #000000;
 	}
 
 	&__item {
-        @include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
 		display: flex;
 
 		&_input {
@@ -571,7 +581,7 @@ input, textarea {
 					border: none;
 				}
 				// @include adaptiveValue("height", 50, 45, $containerWidth, $minWidth, 1);
-				@include adaptiveValue("height", 60, 40, $containerWidth, $minWidth, 1);
+				@include adaptiveValue("height", 52, 40, $containerWidth, $minWidth, 1);
 				&::before{
 					content:'\e90a';
 					color: rgba(0, 0, 0, 0.5);
@@ -585,7 +595,7 @@ input, textarea {
 
 	&__input {
 		flex: 0 1 100%;
-        @include adaptiveValue("font-size", 18, 14, $containerWidth, $minWidth, 1);
+        @include adaptiveValue("font-size", 16, 14, $containerWidth, $minWidth, 1);
 		line-height: 151%;
 		color: #000000;
         @include adaptiveValue("padding-left", 27, 10, $containerWidth, $minWidth, 1);
@@ -610,12 +620,17 @@ input, textarea {
         @media (min-width:$mobileSmall){
             @include adaptiveValue("padding-left", 60, 25, $containerWidth, $minWidth, 1);
             @include adaptiveValue("padding-right", 60, 25, $containerWidth, $minWidth, 1);
+			border-radius: 0 rem(5) rem(5) 0;
         }
+		@media (max-width:$mobileSmall){
+			border-radius: rem(5); 
+		}
         @media (max-width:$mobileSmall){
             width: 100%; 
         }
-        &::before{
-            @include adaptiveValue("font-size", 22, 14, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("font-size", 18, 16, $containerWidth, $minWidth, 1);
+        & span::before{
+            @include adaptiveValue("font-size", 20, 16, $containerWidth, $minWidth, 1);
         }
 	}
 }
@@ -945,12 +960,13 @@ input, textarea {
 		}
 		@media (max-width:$mobileSmall){
 			width: 100%;
-			img {
+			img,
+			source {
 				width: 100%;
 				max-width: 100%;
-				height: rem(425);
+				height: rem(360);
 				@media (max-width: em(380)){
-					height: rem(335);
+					height: rem(330);
 				}
 			}
 		}
@@ -975,6 +991,7 @@ input, textarea {
 	// .banner__link
 
 	&__link {
+		cursor: pointer;
 		background-color: #163F8E;
 		box-shadow: 0px 13px 18px rgba(22, 63, 142, 0.35);
 		border-radius: rem(35);
@@ -1255,7 +1272,7 @@ input, textarea {
 	// .item-products__info
 
 	&__info {
-		height: rem(44);
+		// height: rem(44);
 		margin-bottom: rem(15);
 		display: inline-block;
 		transition: all 0.3s ease 0s;
@@ -1264,7 +1281,7 @@ input, textarea {
 		display: block;
 		display: -webkit-box;
 		// margin: 0 auto;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -1286,11 +1303,44 @@ input, textarea {
 		margin: 0px 0px rem(5) 0px;
 	}
 
+	// .item-products__advantages
+
+	&__advantages {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: rem(10) rem(10) rem(10);
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: rem(5);
+		row-gap: rem(7);
+		&_bottom {
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	// .item-products__advanatege
+
+	&__advanatege {
+		display: inline-block;
+		// #D33238
+		background-color: rgba(211, 50, 55, 0.7);
+		padding: rem(5);
+		color:#fff;
+		font-size: rem(11);
+		line-height: math.div(11, 10);
+		border-radius: rem(5);
+		&_green {
+			background-color: rgba(23, 154, 0, 0.7);
+		}
+	}
+
 	// .item-products__apartment-item
 
 	&__apartment-item {
 		display: inline-flex;
-		
 		gap: rem(5);
 	}
 

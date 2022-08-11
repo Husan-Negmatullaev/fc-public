@@ -114,7 +114,7 @@
 				background-color: #fff;
 				z-index: 5;
 				@media (max-width:$mobile){
-					height: 60px;
+					height: 80px;
 				}
 			}
 			.menu-open & {
@@ -160,10 +160,10 @@
 		@media (max-width:$tablet){
 			flex-direction: column;
 			align-items: center;
-			padding: rem(20) 0px 0px 0px;
+			padding: rem(20) rem(10) rem(15) rem(10);
 		}
 		@media (max-width:$mobile){
-			padding: 0;
+			padding: rem(10) rem(10) rem(15) rem(10);
 		}
 	}
 
@@ -196,7 +196,7 @@
 		padding: 2px 5px;
 		transition: all 0.3s ease 0s;
 		border-radius: 3px;
-		text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		// text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		@media (any-hover: hover){
 			&:hover{
 				color: #fff;
@@ -244,6 +244,9 @@
 	pointer-events: none;
 	._scroll & {
 		padding: rem(45) 0px 0px 0px;
+		@media (max-width:$mobile){
+			padding: rem(10) 0px 0px 0px;
+		}
 	}
 	@media (max-width:$tablet){
 		position: relative;
@@ -259,7 +262,6 @@
 	// .sub-blog-menu__wrapper
 
 	&__wrapper {
-		
 		@media (min-width:$tablet){
 			background-color: #fff;
 			transition: 250ms transform ease-out;
@@ -291,9 +293,9 @@
 
 	&__content {
 		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: rem(20);
+		align-items: flex-start;
+		// flex-wrap: wrap;
+		gap: rem(16);
 		@media (max-width:$tablet){
 			flex-direction: column;
 			align-items: flex-start;
@@ -306,8 +308,8 @@
 
 	&__item {
 		@media (min-width:$tablet){
-			flex: 1 1 25%;
-			margin: 0px 0px rem(40) 0px;
+			flex: 0 1 25%;
+			margin: 0px 0px rem(25) 0px;
 		}
 		@media (any-hover: hover){
 			&:hover{

@@ -680,6 +680,7 @@ input, textarea {
     // .discover-content-image__title
 
     &__title {
+        @include adaptiveValue("font-size", 50, 20, $containerWidth, 767.98, 1);
         @media (min-width:$tablet){
             @include adaptiveValue("margin-bottom", 65, 30, $containerWidth, $minWidth, 1);
         }
@@ -807,6 +808,9 @@ input, textarea {
 // ==========================
 
 .gallery {
+    .slider-arrow {
+        top: 50%;
+    }
     @include adaptiveValue("margin-bottom", 120, 50, $containerWidth, $minWidth, 1);
     // .gallery__container
 

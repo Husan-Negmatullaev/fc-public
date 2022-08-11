@@ -6467,6 +6467,9 @@
                 }
             }
         }
+        if (document.querySelector("#popup-form")) setTimeout((function() {
+            modules_flsModules.popup.open("#popup-form");
+        }), 3e4);
         async function pageMore() {
             const $filterContent = $(".properties-filter .properties__content").isotope({
                 itemSelector: ".properties__item"

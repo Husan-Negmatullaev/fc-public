@@ -82,3 +82,9 @@ function documentActions(e) {
         // });
     }
 }
+
+if (document.querySelector("#popup-form")) {
+    setTimeout(function () {
+        flsModules.popup.open("#popup-form")
+    }, 30000)
+}

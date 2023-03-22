@@ -1,5 +1,4 @@
 import cleanCss from 'gulp-clean-css';
-import del from "del";
 import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
